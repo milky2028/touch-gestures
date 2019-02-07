@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+}
+
+#app {
+  overflow: hidden;
+  padding-top: 50px;
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  grid-template-areas: 
+    "main"
+}
+
+.box {
+  grid-area: main;
+  box-sizing: border-box;
+  padding: 15px;
+  height: 150px;
+  width: 70vw;
+  color: white;
+  font-weight: bold;
+  font-family: Lato;
+  font-size: 16px;
+}
+
+#swipe-box {
+  z-index: 100;
+  background-color: blueviolet;
+}
+
+#background-box {
+  background-color: green;
+}
