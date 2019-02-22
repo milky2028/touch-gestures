@@ -54,7 +54,7 @@ const vue = new Vue({
     },
     removeOrReturnToOriginalPosition() {
       const swiper = vue.$el.querySelector('#swipe-box')
-      if (this.distanceMovedX < 300) {
+      if (this.distanceMovedX < window.innerWidth / 2) {
         swiper.style.transform = `translateX(0)`
         swiper.style.transition = `350ms ease-in`
       } else {
