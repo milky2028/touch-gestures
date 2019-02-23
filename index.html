@@ -4,15 +4,10 @@
     <div
       id="swipe-box"
       class="box"
-      @pointerdown="handleGestureStart($event)"
       @touchstart="handleGestureStart($event)"
-      @pointermove="handleGestureMove($event)"
       @touchmove="handleGestureMove($event)"
-      @pointerup="handleGestureEnd($event)"
-      @pointercancel="handleGestureEnd($event)"
       @touchend="handleGestureEnd($event)"
       @touchcancel="handleGestureEnd($event)"
-      @mousedown="handleGestureStart($event)"
       :style="onGesture">Swipe this box</div>
       <div id="background-box" class="box"></div>
   </div>

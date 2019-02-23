@@ -25,6 +25,12 @@ const vue = new Vue({
       const [ currentX, currentY ] = this.getGesturePoint(event)
       this.distanceMovedX = currentX - this.initialX;
       const s = vue.$el.querySelector('#swipe-box');
+      const underBoy = vue.$el.querySelector('#background-box');
+      if (this.distanceMovedX < 0) {
+        underBoy.style.backgroundColor = 'blue';
+      } else {
+        underBoy.style.backgroundColor = 'orange';
+      }
       s.style.transition = '';
       // s.style.transform = `translateX(${this.distanceMovedX})`;
     },
@@ -53,7 +59,7 @@ const vue = new Vue({
       }
     },
     removeOrReturnToOriginalPosition() {
-      const swiper = vue.$el.querySelector('#swipe-box')
+      const swiper = vue.$el.querySelector('#swipe-box');
       if (this.distanceMovedX < window.innerWidth / 2) {
         swiper.style.transform = `translateX(0)`
         swiper.style.transition = `350ms ease-in`
